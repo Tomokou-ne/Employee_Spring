@@ -1,0 +1,26 @@
+### Send POST request with json body
+POST https://httpbin.org/employee
+Content-Type: application/json
+
+{
+  "id": 14,
+  "name": "Nicolas"
+}
+
+### PUT request with json body
+PUT https://httpbin.org/employee?id=1&test=true
+Content-Type: application/json
+
+{
+  "id": 1,
+  "test": true
+}
+
+### DELETE request
+DELETE http://httpbin.org/employee?id=3
+
+### GET request
+GET http://httpbin.org/employee?id=4
+
+### GET
+GET https://localhost:8080/get
