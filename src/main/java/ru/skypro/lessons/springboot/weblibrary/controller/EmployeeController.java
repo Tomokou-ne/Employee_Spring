@@ -39,7 +39,7 @@ public class EmployeeController {
     }
 
     @GetMapping("/high-salary")
-    public void allEmployeesMoreThenAvg() {
-        employeeService.allEmployeesMoreThenAvg();
+    public List<Employee> allEmployeesMoreThenAvg() {
+        return employeeService.allEmployeesMoreThenAvg();
     }
 }

@@ -13,5 +13,5 @@ public interface EmployeeRepository {
 
     String findHighPaidEmployee();
 
-    void allEmployeesMoreThenAvg();
+    List<Employee> allEmployeesMoreThenAvg();
 }

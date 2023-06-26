@@ -31,7 +31,7 @@ public class EmployeeServiceImpl implements EmployeeService{
         return employeeRepository.findHighPaidEmployee();
     }
 
-    public void allEmployeesMoreThenAvg() {
-        employeeRepository.allEmployeesMoreThenAvg();
+    public List<Employee> allEmployeesMoreThenAvg() {
+        return employeeRepository.allEmployeesMoreThenAvg();
     }
 }

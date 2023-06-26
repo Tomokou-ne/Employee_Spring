@@ -49,14 +49,14 @@ public class EmployeeRepositoryImpl implements EmployeeRepository{
                 .toString();
     }
 
-    public void allEmployeesMoreThenAvg() {
+    public List<Employee> allEmployeesMoreThenAvg() {
         ArrayList<Employee> list = new ArrayList<>();
         for (Employee o : employeeList) {
             if (o.getSalary() >= getSalarySum()/ employeeList.size()) {
                 list.add(o);
             }
         }
-        System.out.println(list);
+        return list;
     }
 
 }

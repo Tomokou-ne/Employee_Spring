@@ -13,5 +13,5 @@ public interface EmployeeService {
 
    String findHighPaidEmployee();
 
-   void allEmployeesMoreThenAvg();
+   List<Employee> allEmployeesMoreThenAvg();
 }
