@@ -23,12 +23,12 @@ public class EmployeeServiceImpl implements EmployeeService{
         return employeeRepository.getSalarySum();
     }
 
-    public void findLowPaidEmployee() {
-        employeeRepository.findLowPaidEmployee();
+    public String findLowPaidEmployee() {
+        return employeeRepository.findLowPaidEmployee();
     }
 
-    public void findHighPaidEmployee() {
-        employeeRepository.findHighPaidEmployee();
+    public String findHighPaidEmployee() {
+        return employeeRepository.findHighPaidEmployee();
     }
 
     public void allEmployeesMoreThenAvg() {

@@ -29,13 +29,13 @@ public class EmployeeController {
     }
 
     @GetMapping("/salary/min")
-    public void findLowPaidEmployee() {
-        employeeService.findLowPaidEmployee();
+    public String findLowPaidEmployee() {
+        return employeeService.findLowPaidEmployee();
     }
 
     @GetMapping("/salary/max")
-    public void findHighPaidEmployee() {
-        employeeService.findHighPaidEmployee();
+    public String findHighPaidEmployee() {
+        return employeeService.findHighPaidEmployee();
     }
 
     @GetMapping("/high-salary")

@@ -3,10 +3,7 @@ package ru.skypro.lessons.springboot.weblibrary.repository;
 import org.springframework.stereotype.Repository;
 import ru.skypro.lessons.springboot.weblibrary.pojo.Employee;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Repository
@@ -32,22 +29,24 @@ public class EmployeeRepositoryImpl implements EmployeeRepository{
     }
 
     @Override
-    public void findLowPaidEmployee() {
-        System.out.println(employeeList.stream()
+    public String findLowPaidEmployee() {
+        return employeeList.stream()
                 .collect(Collectors.toMap(Employee::getName, Employee::getSalary))
                 .entrySet()
                 .stream()
-                .min(Comparator.comparingInt(Map.Entry::getValue)));
+                .min(Comparator.comparingInt(Map.Entry::getValue))
+                .toString();
     }
 
     //сотрудник с макс зп
     @Override
-    public void findHighPaidEmployee() {
-        System.out.println(employeeList.stream()
+    public String findHighPaidEmployee() {
+        return employeeList.stream()
                 .collect(Collectors.toMap(Employee::getName, Employee::getSalary))
                 .entrySet()
                 .stream()
-                .max(Comparator.comparingInt(Map.Entry::getValue)));
+                .max(Comparator.comparingInt(Map.Entry::getValue))
+                .toString();
     }
 
     public void allEmployeesMoreThenAvg() {

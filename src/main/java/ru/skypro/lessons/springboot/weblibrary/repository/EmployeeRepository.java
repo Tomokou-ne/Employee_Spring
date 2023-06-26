@@ -9,9 +9,9 @@ public interface EmployeeRepository {
 
     int getSalarySum();
 
-    void findLowPaidEmployee();
+    String findLowPaidEmployee();
 
-    void findHighPaidEmployee();
+    String findHighPaidEmployee();
 
     void allEmployeesMoreThenAvg();
 }
